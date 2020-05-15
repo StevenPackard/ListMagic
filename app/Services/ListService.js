@@ -21,7 +21,7 @@ class ListService {
   }
 
   addTask(task, listId) {
-    let list = store.State.lists.find(l => l.id = listId)
+    let list = store.State.lists.find(l => l.id == listId)
     list.tasks.push(task)
     store.saveState()
   }

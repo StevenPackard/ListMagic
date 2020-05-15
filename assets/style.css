@@ -7,3 +7,51 @@ body{
 main{
   flex-grow: 1;
 }
+
+header{
+  font-family: 'Rock Salt', cursive;
+}
+
+.list-border{
+  /* border: 3px solid black; */
+  border-radius: 5%;
+  box-shadow: 3px 3px 3px gray ;
+}
+
+.round-top{
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.round-bottom{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.wrap{
+  word-wrap: break-word;
+}
+
+.action{
+  cursor: pointer;
+}
+
+.tall-row{
+  min-height: 500px
+}
+
+.tall-list{
+  min-height: 40vh;
+}
+
+.color-short{
+  max-height: 20%;
+}
+
+.list-tall{
+  min-height: 75%;
+}
+
+.no-margin{
+  margin-top: -8px;
+}

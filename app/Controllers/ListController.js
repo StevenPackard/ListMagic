@@ -39,6 +39,7 @@ export default class ListController {
     let formData = event.target
     let item = formData.task.value
     ListService.addTask(item, listId)
+    formData.reset()
     _drawLists()
   }
 

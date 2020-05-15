@@ -13,37 +13,37 @@ export default class List {
 
   get Template() {
     return /*html*/`
-      <div class="col-3 mt-3">
-        <div class="card shadow">
-          <div class="card-body d-flex flex-column">
-            <i class="fas fa-times text-danger align-self-end action"
-              onclick="app.listController.deleteList('${this.id}')"></i>
-            <h4 class="card-title">${this.name}</h4>
-            <ul class="pl-3">
-            ${this.TaskTemplate}
-            </ul>
-            <form onsubmit="app.listController.addTask(event, '${this.id}')">
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" name="task" id="task" aria-describedby="helpId"
-                  placeholder="Task..." required>
-                <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
+    <div class="col-3 list-border d-flex flex-column my-4 mx-3 tall-list">
+    <div class="row h-100">
+      <div class="col-12 d-flex flex-column round-top mb-2 wrap color-short" style="background-color: ${this.color};">
+        <i class="fas fa-lg fa-times text-light align-self-end action mt-2" onclick="app.listController.deleteList('${this.id}')"></i>
+        <h3 class="text-center text-light pb-2">${this.name}</h3>
       </div>
+      <div class="col-12 d-flex flex-column bg-white list-tall no-margin round-bottom">
+        <ul class="flex-grow-1">
+          ${this.TaskTemplate}
+        </ul>
+        <form class="justify-self-end" onsubmit="app.listController.addTask(event, '${this.id}')">
+          <div class="form-group d-flex">
+            <input type="text" class="form-control" name="task" id="task" aria-describedby="helpId"
+              placeholder="Task..." required>
+            <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   `
   }
 
-
+  // style="background-color:#'${this.color}'"
 
   get TaskTemplate() {
     let template = ""
     this.tasks.forEach((task, index) => {
       template += /*html*/`
-      <li>${task}
-        <i class="fas fa-times text-danger action"
-          onclick="app.listController.deleteTask('${this.id}', ${index})"></i>
+      <li>${task}<span class="ml-3">-</span>
+      <i class="fa text-danger fa-trash ml-3 action" onclick="app.listController.deleteTask('${this.id}', '${index}')" aria-hidden="true"></i>
       </li>
       `
     })
