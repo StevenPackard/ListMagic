@@ -17,12 +17,10 @@
         <h1>Task Master</h1>
       </div>
       <div class="col">
-        <form class="form-inline" onsubmit="app.pizzasController.addPizza(event)">
+        <form class="form-inline" onsubmit="app.listController.addList(event)">
           <div class="form-group">
-            <input type="text" class="form-control" name="name" id="name" aria-describedby="helpId"
-              placeholder="Name of list..." required>
-            <input type="color" class="form-control" name="color" id="color" aria-describedby="helpId"
-              placeholder="Color..." required>
+            <input type="text" class="form-control" name="name" id="name" placeholder="Name of list...">
+            <input type="color" class="form-control" name="color" id="color">
             <button type="submit" class="btn btn-success ml-1">Create</button>
           </div>
         </form>
@@ -33,72 +31,7 @@
 
   <main class="container">
     <!-- Inject list timplate here -->
-    <div class="row">
-      <div class="col-3 mt-3">
-        <div class="card shadow">
-          <div class="card-body d-flex flex-column">
-            <i class="fas fa-times text-danger align-self-end action"
-              onclick="app.pizzasController.deletePizza('${this.id}')"></i>
-            <h4 class="card-title">Name: Homework</h4>
-            <ul class="pl-3">
-              <li>Code - <i class="fas fa-times text-danger action"></i></li>
-              <li>Checkpoint - <i class="fas fa-times text-danger action"></i></li>
-              <li>Study - <i class="fas fa-times text-danger action"></i></li>
-            </ul>
-            <form>
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" name="topping" id="topping" aria-describedby="helpId"
-                  placeholder="Topping..." required>
-                <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 mt-3">
-        <div class="card shadow">
-          <div class="card-body d-flex flex-column">
-            <i class="fas fa-times text-danger align-self-end action"
-              onclick="app.pizzasController.deletePizza('${this.id}')"></i>
-            <h4 class="card-title">Name: Homework</h4>
-            <ul class="pl-3">
-              <li>Code - <i class="fas fa-times text-danger action"></i></li>
-              <li>Checkpoint - <i class="fas fa-times text-danger action"></i></li>
-              <li>Study - <i class="fas fa-times text-danger action"></i></li>
-            </ul>
-            <form>
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" name="topping" id="topping" aria-describedby="helpId"
-                  placeholder="Topping..." required>
-                <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-3 mt-3">
-        <div class="card shadow">
-          <div class="card-body d-flex flex-column">
-            <i class="fas fa-times text-danger align-self-end action"
-              onclick="app.pizzasController.deletePizza('${this.id}')"></i>
-            <h4 class="card-title">Name: Homework</h4>
-            <ul class="pl-3">
-              <li>Code - <i class="fas fa-times text-danger action"></i></li>
-              <li>Checkpoint - <i class="fas fa-times text-danger action"></i></li>
-              <li>Study - <i class="fas fa-times text-danger action"></i></li>
-            </ul>
-            <form>
-              <div class="form-group d-flex">
-                <input type="text" class="form-control" name="topping" id="topping" aria-describedby="helpId"
-                  placeholder="Topping..." required>
-                <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
+    <div class="row" id="list">
 
     </div>
   </main>
