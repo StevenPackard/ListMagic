@@ -23,7 +23,8 @@
       <div class="col">
         <form class="form-inline mb-3 ml-5" onsubmit="app.listController.addList(event)">
           <div class="form-group">
-            <input type="text" class="form-control" name="name" id="name" placeholder="Name your list...">
+            <input type="text" class="form-control" name="name" id="name" placeholder="List name..." required>
+            <label for="color">List Color:</label>
             <input type="color" class="form-control" name="color" id="color">
             <button type="submit" class="btn btn-success ml-2">Create</button>
           </div>
