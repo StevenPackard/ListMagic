@@ -16,6 +16,7 @@ class ListService {
       console.error("invalid id")
       return;
     }
+    window.confirm("Are you sure you want to delete this list?")
     store.State.lists.splice(index, 1)
     store.saveState()
   }

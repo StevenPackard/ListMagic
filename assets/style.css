@@ -8,7 +8,7 @@ main{
   flex-grow: 1;
 }
 
-header{
+.header-font{
   font-family: 'Rock Salt', cursive;
 }
 
@@ -54,4 +54,8 @@ header{
 
 .no-margin{
   margin-top: -8px;
+}
+
+.list-font{
+  font-family: 'Pangolin', cursive;
 }

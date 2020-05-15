@@ -19,7 +19,7 @@ export default class List {
         <i class="fas fa-lg fa-times text-light align-self-end action mt-2" onclick="app.listController.deleteList('${this.id}')"></i>
         <h3 class="text-center text-light pb-2">${this.name}</h3>
       </div>
-      <div class="col-12 d-flex flex-column bg-white list-tall no-margin round-bottom">
+      <div class="col-12 d-flex flex-column bg-white list-tall no-margin round-bottom list-font">
         <ul class="flex-grow-1">
           ${this.TaskTemplate}
         </ul>
@@ -42,7 +42,7 @@ export default class List {
     let template = ""
     this.tasks.forEach((task, index) => {
       template += /*html*/`
-      <li>${task}<span class="ml-3">-</span>
+      <li class="my-1">${task}<span class="ml-3">-</span>
       <i class="fa text-danger fa-trash ml-3 action" onclick="app.listController.deleteTask('${this.id}', '${index}')" aria-hidden="true"></i>
       </li>
       `
