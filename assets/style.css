@@ -41,7 +41,7 @@ li{
 }
 
 .tall-row{
-  min-height: 500px
+  min-height: 30vh;
 }
 
 .tall-list{
@@ -53,7 +53,7 @@ li{
 }
 
 .list-tall{
-  min-height: 75%;
+  min-height: 80%;
 }
 
 .no-margin{
@@ -71,3 +71,20 @@ li{
 #color{
 width: 100px;
 }
+
+@media only screen and (max-width: 600px) {
+  .tall-row{
+    min-height: 50vh;
+  }
+  
+  .tall-list{
+    min-height: 50vh;
+  }
+  .color-short{
+    max-height: 30%;
+  }
+  .list-tall{
+    min-height: 70%;
+  }
+}
+
