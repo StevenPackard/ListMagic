@@ -42,7 +42,7 @@ export default class List {
     let template = ""
     this.tasks.forEach((task, index) => {
       template += /*html*/`
-      <li class="my-2 "> 
+      <li class="my-2"> 
       <input type="checkbox"  id="" class="mr-2">
       ${task}
       <div class="text-right push-up">
