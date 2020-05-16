@@ -22,7 +22,7 @@ li{
   box-shadow: 3px 3px 3px gray ;
 }
 .top-shadow{
-  box-shadow: 5px 5px 5px gray ;
+  box-shadow: 8px 3px 8px gray ;
 }
 
 .round-top{
@@ -69,6 +69,10 @@ li{
 
 .list-font{
   font-family: 'Pangolin', cursive;
+}
+
+.rounded {
+  border-radius: 50%;
 }
 
 #color{
