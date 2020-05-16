@@ -26,7 +26,7 @@ export default class List {
         <form class="justify-self-end" onsubmit="app.listController.addTask(event, '${this.id}')">
           <div class="form-group d-flex">
             <input type="text" class="form-control" name="task" id="task" aria-describedby="helpId"
-              placeholder="Add task..." required>
+              placeholder="Add task..." required autocomplete="off">
             <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
           </div>
         </form>
