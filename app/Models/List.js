@@ -42,7 +42,7 @@ export default class List {
     let template = ""
     this.tasks.forEach((task, index) => {
       template += /*html*/`
-      <li class="my-1">${task}<span class="ml-3">-</span>
+      <li class="my-1"><input class="form-check-input position-static mr-2" type="checkbox" id="blankCheckbox" value="option1">${task}<span class="ml-3">-</span>
       <i class="fa text-danger fa-trash ml-3 action" onclick="app.listController.deleteTask('${this.id}', '${index}')" aria-hidden="true"></i>
       </li>
       `
