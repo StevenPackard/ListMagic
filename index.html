@@ -20,13 +20,13 @@
       <div class="col-12 text-center">
         <h1 class="text-shadow mt-2 text-info header-font">Task Master</h1>
       </div>
-      <div class="col">
+      <div class="col-12 mt-2">
         <form class="form-inline mb-3 ml-5" onsubmit="app.listController.addList(event)">
           <div class="form-group">
             <input type="text" class="form-control" name="name" id="name" placeholder="List name..." required>
-            <label for="color">List Color:</label>
+            <label for="color" class="mt-2">List Color:</label>
             <input type="color" class="form-control" name="color" id="color">
-            <button type="submit" class="btn btn-success ml-2">Create</button>
+            <button type="submit" class="btn btn-success ml-2 mt-2">Create</button>
           </div>
         </form>
       </div>
@@ -36,47 +36,10 @@
 
   <main class="container">
     <!-- Inject list timplate here MAKE SURE TO ADD BACK ID -->
-    <div class="row tall-row d-flex justify-content-center" id="list"></div>
-    <!-- <div class="col-3 list-border d-flex flex-column mt-2 mx-2">
-      <div class="row">
-        <div class="col-12 d-flex flex-column round-edges mb-2" style="background-color: ${this.color};">
-          <i class="fas fa-lg fa-times text-black align-self-end action mt-2"></i>
-          <h3 class="text-center text-light pb-2">'${this.name}'</h3>
-        </div>
-        <div class="col-12">
-          <ul>
+    <div class="row tall-row d-flex justify-content-center" id="list">
 
-          </ul>
-          <form>
-            <div class="form-group d-flex">
-              <input type="text" class="form-control" name="task" id="task" aria-describedby="helpId"
-                placeholder="Task..." required>
-              <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div> -->
-
-    <!-- <div class="col-3 mt-3 border d-flex flex-column">
-      <i class="fas fa-times text-danger align-self-end action my-2"></i>
-      <div class="bg-primary mx-0">
-        <h3 class="text-center text-light">Name</h3>
-      </div>
-      <ul class="mt-2">
-        <li>Blarg - </li>
-        <li>Ashda - </li>
-        <li> Dasdop - </li>
-      </ul>
-      <form>
-        <div class="form-group d-flex">
-          <input type="text" class="form-control" name="task" id="task" aria-describedby="helpId" placeholder="Task..."
-            required>
-          <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
-        </div>
-      </form>
-    </div> -->
     </div>
+
   </main>
 
   <footer class="container-fluid">
@@ -88,22 +51,6 @@
       </div>
     </div>
   </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
