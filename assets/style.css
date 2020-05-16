@@ -8,6 +8,10 @@ main{
   flex-grow: 1;
 }
 
+li{
+  list-style-type: none;
+}
+
 .header-font{
   font-family: 'Rock Salt', cursive;
 }
@@ -54,6 +58,10 @@ main{
 
 .no-margin{
   margin-top: -8px;
+}
+.push-up{
+  margin-top: -25px;
+  margin-right: 10px;
 }
 
 .list-font{

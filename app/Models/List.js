@@ -20,13 +20,13 @@ export default class List {
         <h3 class="text-center text-light pb-2">${this.name}</h3>
       </div>
       <div class="col-12 d-flex flex-column bg-white list-tall no-margin round-bottom list-font">
-        <ul class="flex-grow-1">
+        <ul class="flex-grow-1 pl-2">
           ${this.TaskTemplate}
         </ul>
         <form class="justify-self-end" onsubmit="app.listController.addTask(event, '${this.id}')">
           <div class="form-group d-flex">
             <input type="text" class="form-control" name="task" id="task" aria-describedby="helpId"
-              placeholder="Task..." required>
+              placeholder="Add task..." required>
             <button type="submit" class="btn btn-outline-success ml-1"><i class="fas fa-plus "></i></button>
           </div>
         </form>
@@ -36,14 +36,18 @@ export default class List {
   `
   }
 
-  // style="background-color:#'${this.color}'"
+
 
   get TaskTemplate() {
     let template = ""
     this.tasks.forEach((task, index) => {
       template += /*html*/`
-      <li class="my-1"><input class="form-check-input position-static mr-2" type="checkbox" id="blankCheckbox" value="option1">${task}<span class="ml-3">-</span>
-      <i class="fa text-danger fa-trash ml-3 action" onclick="app.listController.deleteTask('${this.id}', '${index}')" aria-hidden="true"></i>
+      <li class="my-2 "> 
+      <input type="checkbox"  id="" class="mr-2">
+      ${task}
+      <div class="text-right push-up">
+      <i class="fa text-danger fa-trash action" onclick="app.listController.deleteTask('${this.id}', '${index}')" aria-hidden="true"></i>
+      </div>
       </li>
       `
     })
