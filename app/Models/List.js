@@ -13,13 +13,13 @@ export default class List {
 
   get Template() {
     return /*html*/`
-    <div class="col-9 col-lg-3 list-border d-flex flex-column my-4 mx-3 tall-list">
+    <div class="col-9 col-lg-3 top-shadow d-flex flex-column my-4 mx-3 tall-list">
     <div class="row h-100">
       <div class="col-12 d-flex flex-column round-top mb-2 wrap color-short" style="background-color: ${this.color};">
-        <i class="fas fa-lg fa-times text-light align-self-end action mt-2" onclick="app.listController.deleteList('${this.id}')"></i>
-        <h3 class="text-center text-light pb-2">${this.name}</h3>
+        <i class="fas fa-lg fa-times text-white align-self-end action mt-2" onclick="app.listController.deleteList('${this.id}')"></i>
+        <h3 class="text-center text-white pb-2">${this.name}</h3>
       </div>
-      <div class="col-12 d-flex flex-column bg-white list-tall no-margin round-bottom list-font">
+      <div class="col-12 d-flex flex-column bg-white list-tall no-margin round-bottom list-font list-border">
         <ul class="flex-grow-1 pl-2">
           ${this.TaskTemplate}
         </ul>

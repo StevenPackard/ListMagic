@@ -18,8 +18,11 @@ li{
 
 .list-border{
   /* border: 3px solid black; */
-  border-radius: 5%;
+  
   box-shadow: 3px 3px 3px gray ;
+}
+.top-shadow{
+  box-shadow: 5px 5px 5px gray ;
 }
 
 .round-top{
