@@ -93,5 +93,9 @@ width: 100px;
   .list-tall{
     min-height: 70%;
   }
+  
+  .mobile-hide{
+    display: none;
+  }
 }
 
